@@ -69,9 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
             moveCount = 1;
             moveHistory.textContent = '';
     });
-
     document.querySelector('#flip-board').addEventListener
     ('click', () => {
-        board.flip();
+        board.flip();   
+    })
+    document.querySelector('#set-position').addEventListener
+    ('click', () => {
+        let fen = prompt('Enter a FEN string: ');
+        board = Chessboard('board', fen);
     })
 })

@@ -61,4 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     board = Chessboard('board', boardConfig);
+
+    document.querySelector('#reset-board').addEventListener
+        ('click', () => {
+            game.reset();
+            board.start();
+            moveCount = 1;
+            moveHistory.textContent = '';
+    });
+
+    document.querySelector('#flip-board').addEventListener
+    ('click', () => {
+        board.flip();
+    })
 })
